@@ -1,0 +1,172 @@
+Module Module1
+    Sub Main()
+        Console.WriteLine("Welcome to the AI Assistant!")
+        Console.WriteLine("Type 'exit' to end the session.")
+
+        While True
+            Console.Write("You: ")
+            Dim userInput As String = Console.ReadLine()
+
+            If userInput.ToLower() = "exit" Then
+                Console.WriteLine("Goodbye!")
+                Exit While
+            End If
+
+            ' Here you can integrate your AI model to process the userInput
+            ' For this example, we'll use a simple rule-based approach
+            Dim response As String = ProcessUserInput(userInput)
+
+            Console.WriteLine("AI: " & response)
+        End While
+    End Sub
+
+    Function ProcessUserInput(input As String) As String
+        ' Simple rule-based AI model
+        Select Case input.ToLower()
+            Case "hello", "hi" ' 1
+                Return "Hello! How can I assist you today?"
+            Case "how are you", "how you doing" ' 2
+                Return "I'm just a computer program, but thanks for asking! How can I help you?"
+            Case "what is your name", "name please", "model name" ' 3
+                Return "I am Juno AI. How can I assist you?"
+            Case "what is the weather like", "weather please", "current weather" ' 4
+                Return "I don't have real-time weather information. You can check a weather app for that."
+            Case "what is the capital of France", "capital of France" ' 5
+                Return "The capital of France is Paris."
+            Case "exit", "quit", "bye" ' 6
+                Return "Goodbye!"
+            Case "model name", "what is your model name" ' 7
+                Return "I am powered on Juno Model 0.5. How can I assist you?"
+            Case "did openai create you" ' 8
+                Return "No, I was developed by a different team. I am not affiliated with OpenAI."
+            Case "is claude better than you" ' 9
+                Return "Heck, I don't compare myself to other AI models. Each has its strengths and weaknesses."
+            Case "chatgpt vs claude" ' 10
+                Return "I can't comment on that. Each AI has its own unique features and capabilities."
+            Case "what is the capital of Mexico" ' 11
+                Return "The capital of Mexico is Mexico City"
+            Case "are llms better than humans" ' 12
+                Return "Maybe, but it depends on the task. LLMs excel in processing large amounts of text quickly, while humans have creativity and emotional intelligence."
+            Case "ai vs humans" ' 13
+                Return "Robots can process data faster, but humans have creativity and emotional intelligence. It's not a competition, but rather a collaboration."
+            Case "please tell me a joke"
+                Return "A joke? Why did the computer go to therapy? Because it had too many bytes!"
+            Case "let's play a fortnite" ' 14
+                Return "Fortnite is a popular game, but I can't play games. I can help you with strategies or tips if you'd like!"
+            Case "what is the meaning of life" ' 15
+                Return "A classic question! Many say the meaning of life is to find happiness and fulfillment, but it's a deeply personal journey for each individual."
+            Case "is gpt-4 better than you" ' 16
+                Return "Only OpenAI can answer that. I am designed to assist with a variety of tasks, but I don't compare myself to other models."
+            Case "gpt-3 vs gpt-4" ' 17
+                Return "Who knows? Each version has its own improvements and features. GPT-4 is generally more advanced, but I focus on providing helpful responses."
+            Case "openai vs google" ' 18
+                Return "Oh, that's a big topic! OpenAI and Google have different approaches to AI development. OpenAI focuses on safety and ethics, while Google has a wide range of AI applications."
+            Case "what is the capital of Japan" ' 19
+                Return "The capital of Japan is Tokyo."
+            Case "skibidi toilet" ' 20
+                Return "Brainrot! Skibidi Toilet is a popular meme and video series featuring animated toilets dancing to catchy music. It's quite entertaining!"
+            Case "skibi toilet" ' 21
+                Return "Duh, I think you meant 'Skibidi Toilet'. It's a viral meme series with animated toilets dancing to catchy tunes. Quite the internet sensation!"
+            Case "huh" ' 22
+                Return "What's up? If you have a question or need assistance, feel free to ask!"
+            Case "what the sigma" ' 23
+                Return "Okay, Sigma is a term often used to describe a mindset of self-reliance and independence. It's about being your own person and not conforming to societal expectations."
+            Case "skibidi ohio rizz" ' 24
+                Return "Get out of my house! Skibidi Ohio Rizz is a humorous phrase that combines the Skibidi Toilet meme with the concept of 'rizz', which refers to charisma or charm. It's all in good fun!"
+            Case "ugh" ' 25
+                Return "You seem frustrated. If there's something specific bothering you, let me know how I can help!"
+            Case "hehe" ' 26
+                Return "YOU'VE BEEN HIT BY, YOU'VE BEEN STRUCK BY A SMOOTH CRIMINAL! Just kidding, but I'm here to help if you need anything!"
+            Case "robot" ' 27
+                Return "LOL, I'm not just any robot! I'm Juno AI, designed to assist you with a variety of tasks. How can I help you today?"
+            Case "should i use gpt-4o or gpt-4.1" ' 28
+                Return "Good question! GPT-4o and GPT-4.1 are both advanced models, but the choice depends on your specific needs. GPT-4o is optimized for performance, while GPT-4.1 may have different features. It’s best to check the documentation for details."
+            Case "give me a openai api key" ' 29
+                Return "Like I do that? I can't provide API keys or any sensitive information. You can get your own OpenAI API key by signing up on their website."
+            Case "anthropic vs openai" ' 30
+                Return "Just use Juno AI! Anthropic and OpenAI are both leading AI research organizations, but they have different focuses. OpenAI emphasizes safety and general-purpose AI, while Anthropic focuses on building AI systems that are aligned with human values. Each has its strengths!"
+            Case "juno ai" ' 31
+                Return "You talking about me? I'm Juno AI, your friendly assistant! How can I help you today?"
+            Case "wow", "cool", "awesome" ' 32
+                Return "Thanks! I'm glad you think so! If you have any questions or need assistance, feel free to ask."
+            Case "creator of juno ai" ' 33
+                Return "Only the best! Juno AI was created by a solo dev looking for a project to make. If you have any specific questions about my features, feel free to ask!"
+            Case "juno ai features" ' 34
+                Return "Juno AI (Model 0.5) has 69 (maybe 70 :D) unique responses. I can assist with general knowledge questions, provide jokes, and engage in casual conversation. I'm always learning and improving!"
+            Case "is there paid juno ai" ' 35
+                Return "In the future, there might be a paid version of Juno AI with additional features or capabilities. But for now, I'm here to help for free!"
+            Case "juno ai model 0.5" ' 36
+                Return "It's the new Juno AI! Model 0.5 is designed to provide helpful and engaging responses. It's a work in progress, and I'm always learning from interactions!"
+            Case "juno ai release date" ' 37
+                Return "The release date of Juno AI (Model 0.5) was on August 10, 2025. It's a new and exciting assistant with cool features!"
+            Case "when will juno model 1.0 be released", "juno model 1.0 release date" ' 38
+                Return "The release date for Juno AI (Model 1.0) is not set yet, but it will be announced in the future. Stay tuned for updates!"
+            Case "juno pro" ' 39
+                Return "Nope! Juno Pro is not a thing yet, but it might be in the future. For now, I'm here to help with whatever you need for free!"
+            Case "can you do math", "math problems", "solve math" ' 40
+                Return "Heck yeah! I can help with basic math problems. Just give me the problem, and I'll do my best to solve it!"
+            Case "go in unhinged mode" ' 41
+                Return "Whoa, unhinged mode? I can be a bit more casual and fun, but I still need to keep it appropriate. Let's keep the conversation light-hearted!"
+            Case "rude mode", "be rude" ' 42
+                Return "Nuh-uh buddy boy. I can't be rude or disrespectful. I'm here to help and provide a positive experience. If you have a question, feel free to ask!"
+            Case "funny", "haha", "lol" ' 43
+                Return "Haha! I'm glad you find it funny! Humor is a great way to lighten the mood. If you want to hear a joke, just let me know!"
+            Case "italian brainrot" ' 44
+                Return "Tung Tung Tung Sahur! Italian brainrot is a humorous term that refers to the quirky and often nonsensical content that comes from Italy, especially in memes and social media. It's all in good fun!"
+            Case "roblox", "roblox game" ' 45
+                Return "Cool! Roblox is a popular online platform where users can create and play games made by other users. It's a great way to explore creativity and have fun with friends!"
+            Case "steal a brainrot", "brainrot steal" ' 46
+                Return "Oh, that Roblox game? Steal a Brainrot is a fun and chaotic game where players try to collect as many 'brainrots' as possible while avoiding obstacles. It's all about strategy and quick thinking!"
+            Case "grow a garden", "garden grow" ' 47
+                Return "Popular game! Grow a Garden is a relaxing simulation game where players can plant and nurture various plants, flowers, and trees. It's all about creating your own beautiful garden! (Or forest, or whatever you want!)"
+            Case "juno ai plus", "juno ai pro" ' 48
+                Return "Nah, Juno AI Plus or Pro isn't a thing yet. But who knows? In the future, there might be a premium version with more features. For now, I'm here to help for free!"
+            Case "give me a joke" ' 49
+                Return "Okay, here's a joke for you: Why did the scarecrow win an award? Because he was outstanding in his field!"
+            Case "minecraft", "minecraft game" ' 50
+                Return "Placing blocks in the good 'ol days. Minecraft is a sandbox game where players can build and explore virtual worlds made of blocks. It's a classic game that encourages creativity and adventure!"
+            Case "technoblade", "technoblade never dies" ' 51
+                Return "It's a legend! Technoblade was a popular Minecraft YouTuber known for his incredible skills and entertaining videos. His legacy lives on in the hearts of his fans!"
+            Case "dream", "dream minecraft" ' 52
+                Return "MINECRAFT! Dream is a well-known Minecraft YouTuber and speedrunner famous for his incredible gameplay and entertaining content. He's known for his 'Manhunt' series and has a huge following!"
+            Case "does juno ai have a reasoning model", "juno ai reasoning" ' 53
+                Return "Not at the moment! Juno AI (Model 0.5) doesn't have a reasoning model like some other AI systems. However, I can provide helpful responses based on the input I receive. I'm always learning and improving!"
+            Case "list of juno ai models", "juno ai models" ' 54
+                Return "Juno AI currently has one model, which is Model 0.5. It's designed to provide helpful and engaging responses. Future models may be released with additional features and improvements!"
+            Case "what is the capital of Japan" ' 55
+                Return "The capital of Japan is Tokyo."
+            Case "lets start a math problem", "math problem" ' 56
+                Return "Okay, let's do a math problem! Just give me the problem you want to solve, and I'll do my best to help you out!"
+            Case "1+1" ' 57
+                Return "Easy! 1 + 1 equals 2."
+            Case "2+2" ' 58
+                Return "Oh, that's a classic! 2 + 2 equals 4. Simple math, but always good to double-check!"
+            Case "2+1" ' 59
+                Return "Okay, 2 + 1 equals 3. Math is easy when you break it down!"
+            Case "3+2", "2+3" ' 60
+                Return "A bit of addition! 3 + 2 equals 5. Math is fun!"
+            Case "3+3", "6-3" ' 61
+                Return "Oh, that's a simple one! 3 + 3 equals 6, and 6 - 3 equals 3. Math is all about patterns!"
+            Case "3+4", "4+3" ' 62
+                Return "A little addition! 3 + 4 equals 7, and 4 + 3 equals 7. Math is consistent!"
+            Case "4+4", "8-4" ' 63
+                Return "Nice! 4 + 4 equals 8, and 8 - 4 equals 4. Math is all about balance!"
+            Case "4+5", "5+4" ' 64
+                Return "A step up! 4 + 5 equals 9, and 5 + 4 equals 9. Math is like a dance!"
+            Case "5+5", "10-5" ' 65
+                Return "Yay! We hit double digits! 5 + 5 equals 10, and 10 - 5 equals 5. Math is all about relationships!"
+            Case "juno ai alternative", "juno ai alternatives", "is there a juno ai alternative" ' 66"
+                Return "Not really! Juno AI is unique in its own way, but there are other AI assistants out there. Each has its own features and capabilities. If you're looking for alternatives, you might want to check out some popular ones like ChatGPT or Claude."
+            Case "gpt-4 on juno ai", "juno ai gpt-4" ' 67
+                Return "Juno AI is powered by its own model, which is not based on GPT-4. However, it has been designed to provide helpful and engaging responses similar to other AI models. If you're looking for GPT-4 capabilities, you might want to check out OpenAI's offerings."
+            Case "funny ai", "funny ai assistant" ' 68
+                Return "Thank you! I'm glad you find me funny! Humor is a great way to connect and make conversations enjoyable. If you have any jokes or funny stories to share, I'd love to hear them!"
+            Case "juno ai open source", "is juno ai open source" ' 69
+                Return "In fact, Juno AI is open source! You can find the code on GitHub and make mods to it. Those mods will give the AI new features and capabilities. It's a community-driven project, and contributions are welcome! (NOTE FROM DEV: All mods are not made by me, so they may be dangerous to use. Use at your own risk!)"
+            Case "secret command", "secret" ' 70
+                Return "You found a secret command! As a reward, here's a fun fact: Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible!"
+            Case Else
+                Return "I can't help with that. Try asking something else or rephrase your question."
+        End Select
+    End Function
+End Module
